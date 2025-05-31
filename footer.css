@@ -1,0 +1,39 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#footer{
+    /* border: 2px solid ; */
+    height: 20vh;
+}
+.social{
+    justify-content: center;
+    align-items: center;
+
+}
+footer h4{
+    padding-left: 600px;
+}
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #00796b;
+  color: #00796b;
+  font-size: 22px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.social a:hover {
+  background-color: #00796b;
+  color: #fff;
+}
+.social {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
