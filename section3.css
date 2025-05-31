@@ -1,0 +1,118 @@
+@import url(./main.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.skills {
+  height: 100vh;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.skills h3 {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.skills h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.skills-box {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(76, 175, 80, 0.2);
+}
+
+.skills-box h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #388e3c;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.skill {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.skill i {
+  color: #4caf50;
+  margin-top: 4px;
+}
+
+.skill strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.skill p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 3px 0 0;
+}
+
+.skills-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.skills-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* ✅ Responsive layout for tablets and phones */
+@media (max-width: 992px) {
+  .skills-container {
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .skills-box {
+    max-height: 50vh;
+  }
+}
