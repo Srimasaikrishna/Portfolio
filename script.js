@@ -1,4 +1,3 @@
-
   const roles = ["Full Stack Developer", "Web Developer", "Backend Developer","Frontend Developer"];
   let roleIndex = 0;
   let charIndex = 0;
