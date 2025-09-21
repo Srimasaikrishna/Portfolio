@@ -45,4 +45,25 @@ function sendToWhatsApp() {
 
     alert("Redirecting to WhatsApp... Please press SEND in WhatsApp to complete.");
   }
+  // Highlight active navbar link on scroll
+const sections = document.querySelectorAll("section, main");
+const navLinks = document.querySelectorAll("#nav-bar1 a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
   
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100; // Offset for header
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});

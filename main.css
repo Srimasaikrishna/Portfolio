@@ -84,3 +84,84 @@
 main{
     background-color: #fff;
 } 
+/* General mobile fix: up to 480px width */
+@media screen and (max-width: 480px) {
+
+  body {
+    font-size: 14px; /* make text readable */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav#nav-bar1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav#nav-bar1 a {
+    margin: 5px 0;
+  }
+
+  .home, .about, .skills {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .home-img img, .about-img img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .home-content h2, .home-content h3, .about-content h1, .about-content h2 {
+    font-size: 18px;
+  }
+
+  .socials a {
+    margin: 0 5px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet fix: up to 768px width */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav#nav-bar1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav#nav-bar1 a {
+    margin: 5px 10px;
+  }
+
+  .home, .about, .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-img img, .about-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+nav a.active {
+  color: #292929; /* Highlight color */
+  font-weight: bold;
+}
